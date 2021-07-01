@@ -1,3 +1,10 @@
+Author.destroy_all
+Post.destroy_all
+PostTag.destroy_all
+Tag.destroy_all
+Profile.destroy_all
+
+
 author1 = Author.create(
   name: "Wilbert Green"
 )
@@ -74,3 +81,5 @@ post4 = author3.posts.create(
 post4.tags.create(
   name: "facere"
 )
+
+Tag.first.posts << post2
